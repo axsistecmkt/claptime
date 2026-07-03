@@ -255,18 +255,6 @@ body.on-landing .profile-menu{display:none;}
 .btn-secondary{background:rgba(154,176,198,.22);color:var(--text);backdrop-filter:blur(6px);}
 .btn-secondary:hover{background:rgba(154,176,198,.35);}
 
-.hero-indicators{
-  position:absolute;
-  right:48px;bottom:26px;
-  z-index:2;
-  display:flex;gap:8px;
-}
-.hero-indicators .dot{
-  width:7px;height:7px;border-radius:50%;
-  background:rgba(255,255,255,.3);
-}
-.hero-indicators .dot.active{background:var(--blue-light);width:22px;border-radius:4px;transition:all .3s ease;}
-
 /* ================= MENU STRIP ================= */
 .menu-strip{
   position:relative;
@@ -967,7 +955,9 @@ body.on-landing .profile-menu{display:none;}
 @media (max-width:768px){
   .topbar{padding:18px 20px;}
   .hero-content{padding:0 20px 40px;}
-  .menu-strip{grid-template-columns:repeat(2,1fr);padding:0 20px;margin-top:0;}
+  .menu-strip{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;padding:0 20px;margin-top:0;}
+  .menu-card{min-height:120px;justify-content:center;}
+  .menu-label{text-align:center;font-size:13.5px;}
   .profiles-grid{gap:20px;}
   .profile-card{width:110px;}
   .profile-avatar{width:96px;height:96px;}

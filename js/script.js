@@ -131,12 +131,19 @@ fillRow('series', series, posterCardImage);
 (function buildPosterBg(){
   const bg = document.getElementById('posterBg');
   if(!bg) return;
-  const allPosters = peliculas.concat(peliculas2).map(p => p.img);
+  // Mezcla de películas y series
+  let allPosters = peliculas.concat(peliculas2).concat(series).map(p => p.img);
+  // barajado para que películas y series queden intercaladas
+  for(let i = allPosters.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [allPosters[i], allPosters[j]] = [allPosters[j], allPosters[i]];
+  }
   const numCols = 6;
   for(let c = 0; c < numCols; c++){
     const col = document.createElement('div');
     col.className = 'poster-bg-col' + (c % 2 === 1 ? ' poster-bg-col--down' : '');
-    col.style.animationDuration = (55 + c * 8) + 's';
+    // más rápido para que se vean más pósters pasando
+    col.style.animationDuration = (24 + c * 4) + 's';
     // desfase por columna para que no queden alineadas
     const shifted = allPosters.slice(c * 3).concat(allPosters.slice(0, c * 3));
     // duplicamos para un loop continuo (translateY -50%)

@@ -310,7 +310,7 @@ body.on-landing .profile-menu{display:none;}
   gap:14px;
   overflow-x:auto;
   overflow-y:hidden;
-  padding:22px 48px 28px;
+  padding:32px 48px 32px;
   scroll-snap-type:x proximity;
   scrollbar-width:thin;
   scrollbar-color:var(--navy-600) transparent;
@@ -963,7 +963,7 @@ body.on-landing .profile-menu{display:none;}
   .profile-card{width:110px;}
   .profile-avatar{width:96px;height:96px;}
   .row-title{padding:0 20px;}
-  .row-track{padding:22px 20px 28px;}
+  .row-track{padding:32px 20px 32px;}
   .subpage-hero{padding:100px 20px 40px;}
   .subpage-body{padding:0 20px;}
   .celebration-card{flex-direction:column;text-align:center;}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clap Time | axsis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="#home" class="logo-link" data-nav="home">
+    <span class="logo-chip">
+      <img src="assets/logo-axsis-crop.png" alt="axsis" class="logo-img">
+    </span>
+  </a>
+  <div class="profile-menu">
+    <button class="profile-btn" id="profileBtn">
+      <img src="assets/profiles/robot-blue.jpg" alt="Perfil" id="profileBtnImg">
+    </button>
+    <div class="profile-dropdown" id="profileDropdown" hidden>
+      <button class="profile-dropdown-item" data-nav="profiles">Perfiles</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= SELECCIÓN DE PERFIL ================= -->
+<main id="view-profiles" class="view view-profiles">
+  <div class="profiles-wrap">
+    <h1 class="profiles-title">¿Quién está viendo?</h1>
+    <div class="profiles-grid">
+      <button class="profile-card" data-nav="home">
+        <span class="profile-avatar"><img src="assets/profiles/robot-blue.jpg" alt="Ricky"></span>
+        <span class="profile-name">Ricky</span>
+      </button>
+      <button class="profile-card" data-nav="home">
+        <span class="profile-avatar"><img src="assets/profiles/robot-green.jpg" alt="Chava"></span>
+        <span class="profile-name">Chava</span>
+      </button>
+      <button class="profile-card" data-nav="home">
+        <span class="profile-avatar"><img src="assets/profiles/robot-pink.jpg" alt="Cynthia"></span>
+        <span class="profile-name">Cynthia</span>
+      </button>
+      <button class="profile-card profile-card--add" data-nav="home">
+        <span class="profile-avatar profile-avatar--add">
+          <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+        <span class="profile-name">Agregar perfil</span>
+      </button>
+    </div>
+    <button class="btn-edit-profiles" data-nav="home">EDITAR PERFILES</button>
+  </div>
+</main>
+
+<!-- ================= HOME ================= -->
+<main id="view-home" class="view" hidden>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-fade"></div>
+    <div class="hero-content">
+      <span class="hero-tag">AXSIS ORIGINAL EVENT</span>
+      <h1 class="hero-title">Clap Time</h1>
+      <div class="hero-meta">
+        <span class="hero-date">3 DE JULIO</span>
+        <span class="hero-dot">•</span>
+        <span class="hero-hosts">Hosts: Santos Martínez / Salvador Garza</span>
+      </div>
+      <div class="hero-actions">
+        <span class="btn btn-primary">Bienvenidos</span>
+        <span class="btn btn-secondary">Buen viernes</span>
+      </div>
+    </div>
+    <div class="hero-indicators">
+      <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+  </section>
+
+  <section class="menu-strip">
+    <button class="menu-card" data-nav="aniversarios">
+      <span class="menu-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"></path></svg>
+      </span>
+      <span class="menu-label">Aniversarios</span>
+    </button>
+    <button class="menu-card" data-nav="cumpleanos">
+      <span class="menu-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4"></rect><path d="M12 8v13"></path><path d="M19 12v9H5v-9"></path><path d="M12 8c-1.5 0-3-1-3-2.5S10.5 3 12 4c1.5-1 3 0 3 1.5S13.5 8 12 8Z"></path></svg>
+      </span>
+      <span class="menu-label">Cumpleaños</span>
+    </button>
+    <button class="menu-card" data-nav="reconocimientos">
+      <span class="menu-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      </span>
+      <span class="menu-label">Reconocimientos</span>
+    </button>
+    <button class="menu-card" data-nav="dinamica">
+      <span class="menu-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      </span>
+      <span class="menu-label">Dinámica</span>
+    </button>
+  </section>
+
+  <section class="rows">
+
+    <div class="row" data-row="peliculas">
+      <h2 class="row-title">Posibles películas</h2>
+      <div class="row-track"></div>
+    </div>
+
+    <div class="row" data-row="peliculas-2">
+      <h2 class="row-title">Más películas para el viernes</h2>
+      <div class="row-track"></div>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- ================= ANIVERSARIOS ================= -->
+<main id="view-aniversarios" class="view view-sub" hidden>
+  <section class="subpage-hero subpage-hero--aniversarios">
+    <span class="subpage-watermark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="6"></circle><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"></path></svg>
+    </span>
+    <button class="back-btn" data-nav="home" aria-label="Volver">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+    </button>
+    <h1 class="subpage-title">Aniversarios</h1>
+    <span class="subpage-count">1 aniversario</span>
+  </section>
+
+  <section class="subpage-body">
+    <div class="anniversary-showcase">
+      <div class="anniversary-confetti" id="anniversaryConfetti"></div>
+      <div class="anniversary-photo">
+        <img src="assets/wendy.jpg" alt="Wendy Viridiana Montoya García">
+      </div>
+      <div class="anniversary-info">
+        <span class="anniversary-eyebrow">¡Felicidades!</span>
+        <h2 class="anniversary-name">Wendy Viridiana Montoya García</h2>
+        <div class="anniversary-meta">
+          <span class="years-badge">18 años</span>
+          <span class="anniversary-date">25/06/2026</span>
+        </div>
+        <p class="anniversary-message">Gracias por tus <strong>18 años</strong> de trayectoria y compromiso con axsis. Tu dedicación es parte fundamental de lo que somos hoy. ¡Vamos por muchos más!</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= CUMPLEAÑOS ================= -->
+<main id="view-cumpleanos" class="view view-sub" hidden>
+  <section class="subpage-hero subpage-hero--cumpleanos">
+    <span class="subpage-watermark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="8" width="18" height="4"></rect><path d="M12 8v13"></path><path d="M19 12v9H5v-9"></path><path d="M12 8c-1.5 0-3-1-3-2.5S10.5 3 12 4c1.5-1 3 0 3 1.5S13.5 8 12 8Z"></path></svg>
+    </span>
+    <button class="back-btn" data-nav="home" aria-label="Volver">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+    </button>
+    <h1 class="subpage-title">Cumpleaños</h1>
+    <span class="subpage-count">3 cumpleaños</span>
+  </section>
+
+  <section class="subpage-body">
+    <div class="birthday-showcase" id="birthdayConfetti">
+      <div class="birthday-card birthday-card--a">
+        <span class="birthday-date">22/06/2026</span>
+        <h3 class="birthday-name">Gerardo Salvador Velázquez Medina</h3>
+      </div>
+      <div class="birthday-card birthday-card--b">
+        <span class="birthday-date">24/06/2026</span>
+        <h3 class="birthday-name">Carlos Eduardo Sención López</h3>
+      </div>
+      <div class="birthday-card birthday-card--c">
+        <span class="birthday-date">04/07/2026</span>
+        <h3 class="birthday-name">Andrea Lizeth Trevino Chapa</h3>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= RECONOCIMIENTOS ================= -->
+<main id="view-reconocimientos" class="view view-sub" hidden>
+  <section class="subpage-hero subpage-hero--reconocimientos">
+    <button class="back-btn" data-nav="home" aria-label="Volver">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+    </button>
+  </section>
+  <section class="recognition-wrap">
+    <span class="recognition-spark spark-1"></span>
+    <span class="recognition-spark spark-2"></span>
+    <span class="recognition-spark spark-3"></span>
+    <span class="recognition-spark spark-4"></span>
+    <span class="recognition-spark spark-5"></span>
+    <h1 class="recognition-text">Reconocimientos</h1>
+  </section>
+</main>
+
+<!-- ================= DINAMICA ================= -->
+<main id="view-dinamica" class="view view-sub" hidden>
+  <div class="poster-bg" id="posterBg" aria-hidden="true"></div>
+  <section class="subpage-hero subpage-hero--dinamica">
+    <span class="subpage-watermark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+    </span>
+    <button class="back-btn" data-nav="home" aria-label="Volver">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+    </button>
+    <h1 class="subpage-title">Dinámica</h1>
+  </section>
+  <section class="subpage-body">
+    <div class="game-wrap">
+
+      <div class="game-intro" id="gameIntro">
+        <span class="game-intro-emojis">🎬 🍿 🎭 📺 🎞️</span>
+        <span class="game-intro-eyebrow">Dinámica Clap Time</span>
+        <h3>Adivina la película o serie</h3>
+        <p>Te vamos a mostrar una combinación de emojis que describe una película o serie. Solo te daremos una pista: si es película o serie. ¡Todo lo demás lo tienes que adivinar tú!</p>
+        <button class="btn btn-game-start" id="btnStartGame">Iniciar juego</button>
+      </div>
+
+      <div class="game-panel" id="gamePanel" hidden>
+        <div class="game-toast" id="gameToast">Correcto</div>
+        <div class="game-progress">
+          <span id="gameProgressText">Pregunta 1 de 30</span>
+          <span id="gameScoreText">Aciertos: 0</span>
+        </div>
+        <span class="game-hint-badge" id="gameHintBadge">Película</span>
+        <div class="game-emojis" id="gameEmojis"></div>
+        <div class="game-input-row">
+          <input type="text" class="game-input" id="gameInput" placeholder="Escribe tu respuesta..." autocomplete="off">
+          <button class="btn btn-primary" id="gameSubmit">Responder</button>
+        </div>
+        <div class="game-actions">
+          <button class="game-skip" id="gameSkip">Saltar pregunta</button>
+          <button class="game-restart" id="gameRestart">Volver a empezar</button>
+        </div>
+      </div>
+
+      <div class="game-end" id="gameEnd" hidden>
+        <h3>¡Juego terminado!</h3>
+        <p id="gameEndScore"></p>
+        <button class="btn btn-primary" id="btnReplay">Jugar de nuevo</button>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

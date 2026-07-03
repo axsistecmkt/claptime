@@ -365,56 +365,6 @@ body.on-landing .profile-menu{display:none;}
   margin-top:4px;
 }
 
-/* ---- Póster de serie (diseño) ---- */
-.poster--series{
-  align-items:stretch;
-  flex-direction:column;
-  justify-content:flex-end;
-}
-.poster--series::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:radial-gradient(ellipse at 70% 15%, rgba(255,255,255,.18), transparent 55%);
-  pointer-events:none;
-}
-.poster-tag{
-  position:absolute;
-  top:14px;left:14px;
-  z-index:2;
-  padding:4px 9px;
-  border-radius:5px;
-  font-size:9.5px;
-  font-weight:800;
-  letter-spacing:1.5px;
-  color:#fff;
-  background:rgba(0,0,0,.35);
-  backdrop-filter:blur(4px);
-  border:1px solid rgba(255,255,255,.25);
-}
-.poster-series-body{
-  position:relative;
-  z-index:1;
-  flex:1;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:20px 16px;
-}
-.poster-series-title{
-  font-family:var(--font-title);
-  font-weight:800;
-  font-size:24px;
-  line-height:1.1;
-  text-align:center;
-  color:#fff;
-  text-shadow:0 3px 14px rgba(0,0,0,.5);
-}
-.poster--series .poster-info{
-  background:linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 100%);
-}
-.poster--series .poster-sub{color:rgba(255,255,255,.85);}
-
 /* ================= SUBPAGES ================= */
 .view-sub{padding-bottom:60px;}
 

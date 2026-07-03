@@ -91,18 +91,18 @@ const peliculas2 = [
   { img:'assets/posters/moana.jpg', titulo:'Moana', sub:'2016 · Animación' }
 ];
 
-// ---------- Datos de series (pósters con diseño) ----------
+// ---------- Datos de series (pósters reales) ----------
 const series = [
-  { titulo:'El Juego del Calamar', sub:'2021 · Thriller', grad:'linear-gradient(150deg,#e4007e 0%,#0b0b1a 55%,#29d3c6 130%)' },
-  { titulo:'La Casa de Papel', sub:'2017 · Suspenso', grad:'linear-gradient(150deg,#c0122b 0%,#3a0007 100%)' },
-  { titulo:'Stranger Things', sub:'2016 · Ciencia ficción', grad:'linear-gradient(150deg,#e50914 0%,#1a0207 60%,#3b0a0f 100%)' },
-  { titulo:'Game of Thrones', sub:'2011 · Fantasía', grad:'linear-gradient(150deg,#4a4f57 0%,#0c0f14 60%,#a8842f 130%)' },
-  { titulo:'Breaking Bad', sub:'2008 · Drama', grad:'linear-gradient(150deg,#2e7d32 0%,#0a1f0c 60%,#c9a227 130%)' },
-  { titulo:'Friends', sub:'1994 · Comedia', grad:'linear-gradient(150deg,#2b2b2b 0%,#111 50%,#e4b400 130%)' },
-  { titulo:'The Office', sub:'2005 · Comedia', grad:'linear-gradient(150deg,#2b5c8a 0%,#0c1c2c 100%)' },
-  { titulo:'Los Simpson', sub:'1989 · Animación', grad:'linear-gradient(150deg,#f4c20d 0%,#7a5a00 100%)' },
-  { titulo:'The Walking Dead', sub:'2010 · Terror', grad:'linear-gradient(150deg,#6b6f5a 0%,#0d0d0b 55%,#7a1414 130%)' },
-  { titulo:'Merlina', sub:'2022 · Misterio', grad:'linear-gradient(150deg,#5a3a8a 0%,#0e0a1a 60%,#1e2c1f 130%)' }
+  { img:'assets/series/squid-game.png', titulo:'El Juego del Calamar', sub:'2021 · Thriller' },
+  { img:'assets/series/stranger-things.jpg', titulo:'Stranger Things', sub:'2016 · Ciencia ficción' },
+  { img:'assets/series/got.jpg', titulo:'Game of Thrones', sub:'2011 · Fantasía' },
+  { img:'assets/series/breaking-bad.jpg', titulo:'Breaking Bad', sub:'2008 · Drama' },
+  { img:'assets/series/friends.jpg', titulo:'Friends', sub:'1994 · Comedia' },
+  { img:'assets/series/the-office.jpg', titulo:'The Office', sub:'2005 · Comedia' },
+  { img:'assets/series/simpsons.jpg', titulo:'Los Simpson', sub:'1989 · Animación' },
+  { img:'assets/series/walking-dead.jpg', titulo:'The Walking Dead', sub:'2010 · Terror' },
+  { img:'assets/series/mandalorian.jpg', titulo:'The Mandalorian', sub:'2019 · Ciencia ficción' },
+  { img:'assets/series/chernobyl.jpg', titulo:'Chernobyl', sub:'2019 · Drama' }
 ];
 
 function posterCardImage({img, titulo, sub}){
@@ -118,22 +118,6 @@ function posterCardImage({img, titulo, sub}){
   return el;
 }
 
-function posterCardSeries({titulo, sub, grad}){
-  const el = document.createElement('div');
-  el.className = 'poster poster--series';
-  el.style.background = grad;
-  el.innerHTML = `
-    <span class="poster-tag">SERIE</span>
-    <div class="poster-series-body">
-      <h3 class="poster-series-title">${titulo}</h3>
-    </div>
-    <div class="poster-info">
-      <div class="poster-sub">${sub}</div>
-    </div>
-  `;
-  return el;
-}
-
 function fillRow(selector, items, builder){
   const track = document.querySelector(`[data-row="${selector}"] .row-track`);
   if(!track) return;
@@ -141,7 +125,7 @@ function fillRow(selector, items, builder){
 }
 
 fillRow('peliculas', peliculas.concat(peliculas2), posterCardImage);
-fillRow('series', series, posterCardSeries);
+fillRow('series', series, posterCardImage);
 
 // ---------- Fondo de pósters en movimiento (Dinámica) ----------
 (function buildPosterBg(){
